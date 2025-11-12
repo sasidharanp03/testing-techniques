@@ -9,33 +9,7 @@ creating test cases based on use cases, which describe how a user ("actor") inte
 to achieve a specific goal. It focuses on end-to-end transactions, covering both the main success scenario
 and potential extensions, or error conditions, to identify gaps that might be missed in component testing.
 Key aspects of use case testing 
-
-        Usecase Diagram for Banking 
-     For User
-Register — Create a new account in the banking system.
-Login — Authenticate with credentials to access account.
-Check Balance — View current account balance.
-Transfer Funds — Send money to another account.
-
-For Admin
-Register — Create an admin account.
-Login — Authenticate into the admin portal.
-Delete Account Details — Remove a user’s account from the system.
-Update Account Details — Modify user details ( address, contact)
-
-Actors on the left/right:
-User → on the left side connected to:
-Register
-Login
-Check Balance
-Transfer Funds
-
-Admin → on the right side connected to:
-Register
-Login
-Delete Account Details
-Update Account Details
-All use cases are contained inside the “Banking System” boundary 
+ 
 
                       State Transition Testing:
 State transition testing is a black-box software testing technique that focuses on verifying the behavior of a system as it transitions between different states in response to specific events or inputs. This technique is particularly useful for systems where the output depends not only on the current input but also on the system's previous state.
