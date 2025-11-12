@@ -1,28 +1,14 @@
-            *1. State Transition Testing*
-- *Definition:*  
-  A technique that tests the system’s behavior as it moves from one state to another based on events or inputs.
- *Focus:*  
-  Changes in system *states* (e.g., login → dashboard → logout).
- *Used When:*  
-  The system behavior depends on *past actions or sequences* (like ATM, vending machines, login systems).
+            State transition testing
+-> It is a black-box software testing technique that focuses on verifying the behavior of a system as it transitions between
+different states in response to specific events or inputs. This technique is particularly useful for systems where the output
+depends not only on the current input but also on the system's previous state.
 
- *Example:*  
-  User enters wrong password 3 times → account gets locked.
-
-2. Use Case Testing*
-*Definition:*  
-  A technique that tests *user interactions* with the system based on real-life *scenarios* or *flows*.
- *Focus:*  
-  How the system responds to *user actions* to achieve a goal.
- *Used When:*  
-Testing *end-to-end flows* and user behavior (like online shopping, booking tickets).
-
-*Example:*  
-  User searches product → adds to cart → completes payment.
-
-*Key Difference:*  
-- *State Transition Testing* checks system *state changes*.  
-- *Use Case Testing* validates *user goal-based workflows*.
+                  Use case testing 
+Use case testing is a black-box testing technique that validates a system's functional
+creating test cases based on use cases, which describe how a user ("actor") interacts with the system 
+to achieve a specific goal. It focuses on end-to-end transactions, covering both the main success scenario
+and potential extensions, or error conditions, to identify gaps that might be missed in component testing.
+Key aspects of use case testing 
 
         Usecase Diagram for Banking 
      For User
@@ -61,13 +47,13 @@ Transition: The movement of the system from one state to another, initiated by a
 Action: The system's response or output that occurs during or after a state transition. This could be displaying a success message, denying access, or performing a calculation.
 
 State transition testing involves:
-Modeling the System: Representing the system's states and transitions using a state transition diagram (a visual representation) or a state transition table (a tabular representation). These models define all possible states, the events that cause transitions between them, and the resulting actions.
-Designing Test Cases: Creating test cases to cover all valid and invalid state transitions. This includes:
-Valid Transitions: Testing that the system correctly moves to the expected next state when a valid event occurs.
-Invalid Transitions: Testing that the system handles unexpected or incorrect events gracefully, preventing unauthorized transitions or displaying appropriate error messages.
-Sequence Testing: Testing sequences of events and transitions to ensure the system behaves as expected over a series of interactions.
-Executing Tests: Executing the designed test cases and observing the system's behavior to confirm that it transitions between states correctly and performs the right actions during these transitions.
-example:
+Modeling the System:
+Designing Test Cases:
+Valid Transitions: 
+Invalid Transitions: 
+Sequence Testing: 
+Executing Tests: 
+ex:
 State ID   Description        
  S1        User not logged in 
  S2        User logged in     
