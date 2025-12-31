@@ -1,47 +1,42 @@
-            State transition testing
--> It is a black-box software testing technique that focuses on verifying the behavior of a system as it transitions between
-different states in response to specific events or inputs. This technique is particularly useful for systems where the output
-depends not only on the current input but also on the system's previous state.
+ 3 examples explaining White Box Testing :
 
-                  Use case testing 
-Use case testing is a black-box testing technique that validates a system's functional
-creating test cases based on use cases, which describe how a user ("actor") interacts with the system 
-to achieve a specific goal. It focuses on end-to-end transactions, covering both the main success scenario
-and potential extensions, or error conditions, to identify gaps that might be missed in component testing.
-Key aspects of use case testing 
- 
+1. Condition/Decision Testing:  
+Example: In a login system, if the condition is:  
+if username == "admin" and password == "1234":  
+White box testing checks all possible paths, like:  
+--> Correct username & password  
+--> Correct username, wrong password  
+--> Wrong username, correct password  
+--> Both wrong
 
-                      State Transition Testing:
-State transition testing is a black-box software testing technique that focuses on verifying the behavior of a system as it transitions between different states in response to specific events or inputs. This technique is particularly useful for systems where the output depends not only on the current input but also on the system's previous state.
+2. Loop Testing:  
+Example: In a function that runs:  
+for i in range(5):  
+White box testing checks:  
+--> What happens if the loop runs 0 times  
+--> Exactly 5 times  
+--> More than 5 times (if modified)
 
-Core Concepts:
-State: A distinct condition or mode the system can be in at a given moment. For example, in a banking application, states could include "Logged Out," "Logged In," "Funds Available," or "Account Locked."
-Event: An input or action that triggers a change from one state to another. Examples include "entering credentials," "making a deposit," or "exceeding login attempts."
-Transition: The movement of the system from one state to another, initiated by an event.
-Action: The system's response or output that occurs during or after a state transition. This could be displaying a success message, denying access, or performing a calculation.
+3. Statement Testing:  
+Example:  
+python
+if x > 0:  
+   print("Positive")  
+else:  
+   print("Negative or Zero")
 
-State transition testing involves:
-Modeling the System:
-Designing Test Cases:
-Valid Transitions: 
-Invalid Transitions: 
-Sequence Testing: 
-Executing Tests: 
-ex:
-State ID   Description        
- S1        User not logged in 
- S2        User logged in     
- S3        Item added to cart 
- S4        Order placed 
+White box testing ensures both statements are executed by giving inputs like x = 5 and x = -2.
 
- Event ID  Input / Action   
- E1        Login            
- E2        Add item to cart 
- E3        Place order      
- E4        Logout           
-   
-   The user starts in S1 (Not Logged In).
-   After login (E1), they go to S2 (Logged In).
-   They can add an item (E2) → moves to S3 (Item Added to Cart).
-   When they place the order (E3), they reach S4 (Order Placed).
-   Logout (E4) always takes them back to S1 (Not Logged In)
+2.Summarize key challenge and solutions related to White Box Testing.
+1. Requires Code Knowledge  
+==> Testers need to understand programming and logic.  
+==>  Involve developers or provide training for testers in basic coding and logic flow.
+2.  Time-Consuming  
+==>  Covering all code paths, loops, and conditions takes time.  
+==>  Use automation tools and focus on critical paths first.
+3. Maintenance Overhead  
+==>  When code changes, tests need updating.  
+==> Keep test cases modular and well-documented for easy updates.
+4.Limited to Internal Logic  
+==>  Doesn't cover missing requirements or real-world usage.  
+==>  Combine with black box testing for complete coverage.
